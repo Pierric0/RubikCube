@@ -39,3 +39,5 @@ Thumbs.db
 # My Ignore Files
 #################
 build/
+.vscode
+.vs
