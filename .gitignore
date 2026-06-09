@@ -43,3 +43,4 @@ build/
 .vs
 ExternalResources/
 Altes Semester/
+*.vs
