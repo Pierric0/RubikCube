@@ -1,14 +1,17 @@
-#include "GameInterface.h"
+
 #define GLEW_STATIC
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+#include "GameInterface.h"
 #include "TestGlm.h"
+#include "TestTriangle.h"
 
 // Collection of test classes.
 GameInterface gDummyTest;
 TestGlm gTestGlm;
+TestTriangle gTestTriangle;
 
 GameInterface* gUsedInterface;
 
@@ -49,7 +52,7 @@ void RunCoreloop(GLFWwindow* window)
         glViewport(0, 0, screenWidth, screenHeight);
         glEnable(GL_DEPTH_TEST);    // tiefentest I guess
         glDepthFunc(GL_LEQUAL);
-        glClearColor(1.0f,0.0f, 0.0f, 1.0f); // Hier Farbe ändern falls du nichts siehst
+        glClearColor(1.0f,1.0f, 0.0f, 1.0f); // Hier Farbe ändern falls du nichts siehst
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         gUsedInterface->Render(aspectRatio);
@@ -70,7 +73,8 @@ void ShutdownSystem()
 int main()
 {
     //gUsedInterface = &gDummyTest;
-    gUsedInterface = &gTestGlm;
+    //gUsedInterface = &gTestGlm;
+    gUsedInterface = &gTestTriangle;
 
     GLFWwindow* window = InitializeSystem();
     RunCoreloop(window);
