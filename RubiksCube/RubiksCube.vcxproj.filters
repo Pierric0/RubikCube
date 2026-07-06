@@ -16,6 +16,12 @@
     <Filter Include="Shader">
       <UniqueIdentifier>{3ee269d4-4115-4655-8dc3-f47fe766223e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\Test">
+      <UniqueIdentifier>{f7a71ae8-1081-47b1-92ec-19a55e5a02d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Test">
+      <UniqueIdentifier>{e6bb8d6f-5afd-4019-b1e4-410990479b27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RubiksCube.cpp">
@@ -24,28 +30,34 @@
     <ClCompile Include="GameInterface.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="TestGlm.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="ShaderUtil.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="TestTriangle.cpp">
+    <ClCompile Include="CubieRenderer.cpp">
       <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TestGlm.cpp">
+      <Filter>Quelldateien\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="TestTriangle.cpp">
+      <Filter>Quelldateien\Test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameInterface.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="TestGlm.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="ShaderUtil.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="TestTriangle.h">
+    <ClInclude Include="CubieRenderer.h">
       <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="TestGlm.h">
+      <Filter>Headerdateien\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="TestTriangle.h">
+      <Filter>Headerdateien\Test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +65,12 @@
       <Filter>Shader</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="VSimple.glsl">
+      <Filter>Shader</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="VColor.glsl">
+      <Filter>Shader</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="FColor.glsl">
       <Filter>Shader</Filter>
     </CopyFileToFolders>
   </ItemGroup>
