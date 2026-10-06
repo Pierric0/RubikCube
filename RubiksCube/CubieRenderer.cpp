@@ -12,7 +12,7 @@ void CubieRenderer::Render(const glm::mat4& transformationMatrix)
 	glBindVertexArray(m_arrayBufferObject);
 
 	glUniformMatrix4fv(m_transformLocation, 1, GL_FALSE, glm::value_ptr(transformationMatrix));
-	glDrawArrays(GL_TRIANGLES)
+	//glDrawArrays(GL_TRIANGLES);
 }
 
 void CubieRenderer::ClearResources()
