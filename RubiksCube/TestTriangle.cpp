@@ -16,7 +16,7 @@ void TestTriangle::Initialize()
 	m_shaderProgram = ShaderUtil::CreateShaderProgram("VSimple.glsl", "FSimple.glsl");
 	m_transformLocation = glGetUniformLocation(m_shaderProgram, "transformation"); // findet die transformationsmatrix id in VSimple.glsl
 
-	glGenVertexArrays(1, &m_arrayBufferObject); // erzeugt ein VAO ([Vertex]ArrayBuffer)
+	glGenVertexArrays(1, &m_arrayBufferObject); // erzeugt ein VAO ([Vertex]ArrayBuffer. ist sozusagen eine anleitung wie die vertexbuffer zu benutzen sind.)
 	glGenBuffers(1, &m_vertexBufferObject); // erzeugt ein (leeres) VBO (VertexBufferObject) bereit
 
 	glBindVertexArray(m_arrayBufferObject); // VAO aktivieren, alles folgende wir hierein gespeichert
