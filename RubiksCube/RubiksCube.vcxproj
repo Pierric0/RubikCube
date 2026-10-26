@@ -152,6 +152,8 @@
     <ClCompile Include="ShaderUtil.cpp" />
     <ClCompile Include="TestCompoundCube.cpp" />
     <ClCompile Include="TestGlm.cpp" />
+    <ClCompile Include="TestKey.cpp" />
+    <ClCompile Include="TestMaus.cpp" />
     <ClCompile Include="TestTriangle.cpp" />
     <ClCompile Include="TestCubie.cpp" />
   </ItemGroup>
@@ -163,6 +165,8 @@
     <ClInclude Include="ShaderUtil.h" />
     <ClInclude Include="TestCompoundCube.h" />
     <ClInclude Include="TestGlm.h" />
+    <ClInclude Include="TestKey.h" />
+    <ClInclude Include="TestMaus.h" />
     <ClInclude Include="TestTriangle.h" />
     <ClInclude Include="TestCubie.h" />
   </ItemGroup>

@@ -2,6 +2,7 @@
 
 #include "KeyboardObserver.h"
 #include <map>
+#include <glm/mat4x4.hpp>
 
 class InputSystem
 {
@@ -14,6 +15,12 @@ public:
 	bool IsKeyDown(int key) { return m_keyMapper[key].m_isDown; }
 	bool WasKeyPressed(int key) { return m_keyMapper[key].m_wasPressed; }
 	bool WasKeyReleased(int key) { return m_keyMapper[key].m_wasReleased; }
+
+	bool IsLeftMouseButtonDown();
+	bool IsRightMouseButtonDown();
+
+	void GetPickingRay(const glm::mat4& tranformationMatrix, glm::vec3& startingPoint, glm::vec3& direction);
+	void GetMousePosition(double& xpos, double& ypos);
 
 private:
 	std::map<int, KeyboardObserver> m_keyMapper;

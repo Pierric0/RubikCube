@@ -9,8 +9,8 @@
 #include "TestTriangle.h"
 #include "TestCubie.h"
 #include "TestCompoundCube.h"
-
-// 9:38
+#include "TestKey.h"
+#include "TestMaus.h"
 
 // Collection of test classes.
 GameInterface gDummyTest;
@@ -18,6 +18,8 @@ TestGlm gTestGlm;
 TestTriangle gTestTriangle;
 TestCubie gTestCubie;
 TestCompoundCube gTestCompoundCube;
+TestKey gTestKey;
+TestMaus gTestMaus;
 
 GameInterface* gUsedInterface;
 
@@ -58,7 +60,7 @@ void RunCoreloop(GLFWwindow* window)
         glViewport(0, 0, screenWidth, screenHeight);
         glEnable(GL_DEPTH_TEST);    // tiefentest I guess
         glDepthFunc(GL_LEQUAL);
-        glClearColor(1.0f,1.0f, 0.0f, 1.0f); // Hier Farbe ändern falls du nichts siehst
+        glClearColor(0.0f,1.0f, 1.0f, 1.0f); // Hier Farbe ändern falls du nichts siehst
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         gUsedInterface->Render(aspectRatio);
@@ -82,7 +84,9 @@ int main()
     //gUsedInterface = &gTestGlm;
     //gUsedInterface = &gTestTriangle;
     //gUsedInterface = &gTestCubie;
-    gUsedInterface = &gTestCompoundCube;
+    //gUsedInterface = &gTestCompoundCube;
+    //gUsedInterface = &gTestKey;
+    gUsedInterface = &gTestMaus;
 
     GLFWwindow* window = InitializeSystem();
     RunCoreloop(window);
@@ -90,32 +94,3 @@ int main()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
-// Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
-
-// Tipps für den Einstieg: 
-//   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufügen/Verwalten von Dateien.
-//   2. Verwenden Sie das Team Explorer-Fenster zum Herstellen einer Verbindung mit der Quellcodeverwaltung.
-//   3. Verwenden Sie das Ausgabefenster, um die Buildausgabe und andere Nachrichten anzuzeigen.
-//   4. Verwenden Sie das Fenster "Fehlerliste", um Fehler anzuzeigen.
-//   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufügen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufügen", um dem Projekt vorhandene Codedateien hinzuzufügen.
-//   6. Um dieses Projekt später erneut zu öffnen, wechseln Sie zu "Datei" > "Öffnen" > "Projekt", und wählen Sie die SLN-Datei aus.
