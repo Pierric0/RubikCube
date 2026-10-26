@@ -10,6 +10,8 @@
 #include "TestCubie.h"
 #include "TestCompoundCube.h"
 
+// 9:38
+
 // Collection of test classes.
 GameInterface gDummyTest;
 TestGlm gTestGlm;
@@ -34,7 +36,7 @@ GLFWwindow* InitializeSystem()
     glewExperimental = GL_TRUE;
     glewInit();
 
-    gUsedInterface->Initialize();
+    gUsedInterface->Initialize(window);
 
     return window;
 }

@@ -146,7 +146,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CubieRenderer.cpp" />
-    <ClCompile Include="GameInterface.cpp" />
+    <ClCompile Include="InputSystem.cpp" />
+    <ClCompile Include="KeyboardObserver.cpp" />
     <ClCompile Include="RubiksCube.cpp" />
     <ClCompile Include="ShaderUtil.cpp" />
     <ClCompile Include="TestCompoundCube.cpp" />
@@ -157,6 +158,8 @@
   <ItemGroup>
     <ClInclude Include="CubieRenderer.h" />
     <ClInclude Include="GameInterface.h" />
+    <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="KeyboardObserver.h" />
     <ClInclude Include="ShaderUtil.h" />
     <ClInclude Include="TestCompoundCube.h" />
     <ClInclude Include="TestGlm.h" />

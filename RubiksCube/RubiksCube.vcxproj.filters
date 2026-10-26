@@ -22,20 +22,26 @@
     <Filter Include="Quelldateien\Test">
       <UniqueIdentifier>{e6bb8d6f-5afd-4019-b1e4-410990479b27}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\Input">
+      <UniqueIdentifier>{c23374f6-216b-4f99-b7e1-fa3abdefe79d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Input">
+      <UniqueIdentifier>{83ef24eb-d0b9-4c7b-b468-e9b9608aeccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\Interfaces">
+      <UniqueIdentifier>{0be42ce7-03b8-44a8-b236-2c4088b2518c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\main">
+      <UniqueIdentifier>{35bf5133-65b3-48bd-b5e3-edb35d6e8420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\Shader und Render">
+      <UniqueIdentifier>{28cf4dfa-f6b6-488e-ab29-2f544722f1c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Shader und Render">
+      <UniqueIdentifier>{d998f559-28a8-42a6-ba23-e3b8d7709a7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RubiksCube.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="GameInterface.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderUtil.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="CubieRenderer.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="TestGlm.cpp">
       <Filter>Quelldateien\Test</Filter>
     </ClCompile>
@@ -48,17 +54,23 @@
     <ClCompile Include="TestCompoundCube.cpp">
       <Filter>Quelldateien\Test</Filter>
     </ClCompile>
+    <ClCompile Include="InputSystem.cpp">
+      <Filter>Quelldateien\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardObserver.cpp">
+      <Filter>Quelldateien\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="RubiksCube.cpp">
+      <Filter>Quelldateien\main</Filter>
+    </ClCompile>
+    <ClCompile Include="CubieRenderer.cpp">
+      <Filter>Quelldateien\Shader und Render</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderUtil.cpp">
+      <Filter>Quelldateien\Shader und Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameInterface.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderUtil.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="CubieRenderer.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="TestGlm.h">
       <Filter>Headerdateien\Test</Filter>
     </ClInclude>
@@ -70,6 +82,21 @@
     </ClInclude>
     <ClInclude Include="TestCompoundCube.h">
       <Filter>Headerdateien\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem.h">
+      <Filter>Headerdateien\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardObserver.h">
+      <Filter>Headerdateien\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInterface.h">
+      <Filter>Headerdateien\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="CubieRenderer.h">
+      <Filter>Headerdateien\Shader und Render</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderUtil.h">
+      <Filter>Headerdateien\Shader und Render</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
