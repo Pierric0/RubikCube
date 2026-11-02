@@ -69,6 +69,18 @@
     <ClCompile Include="ShaderUtil.cpp">
       <Filter>Quelldateien\Shader und Render</Filter>
     </ClCompile>
+    <ClCompile Include="TestMaus.cpp">
+      <Filter>Quelldateien\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="TestKey.cpp">
+      <Filter>Quelldateien\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="TestTexture.cpp">
+      <Filter>Quelldateien\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="TestSound.cpp">
+      <Filter>Quelldateien\Test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestGlm.h">
@@ -98,6 +110,18 @@
     <ClInclude Include="ShaderUtil.h">
       <Filter>Headerdateien\Shader und Render</Filter>
     </ClInclude>
+    <ClInclude Include="TestKey.h">
+      <Filter>Headerdateien\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMaus.h">
+      <Filter>Headerdateien\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="TestTexture.h">
+      <Filter>Headerdateien\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="TestSound.h">
+      <Filter>Headerdateien\Test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="FSimple.glsl">
@@ -111,6 +135,18 @@
     </CopyFileToFolders>
     <CopyFileToFolders Include="FColor.glsl">
       <Filter>Shader</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Texture.jpg">
+      <Filter>Ressourcendateien</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="VTexture.glsl">
+      <Filter>Shader</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="FTexture.glsl">
+      <Filter>Shader</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="TestSound.wav">
+      <Filter>Ressourcendateien</Filter>
     </CopyFileToFolders>
   </ItemGroup>
 </Project>

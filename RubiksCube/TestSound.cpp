@@ -1,0 +1,18 @@
+#include "TestSound.h"
+#include <windows.h>
+#include <GLFW/glfw3.h>
+
+void TestSound::Initialize(GLFWwindow* window)
+{
+	m_input.SetWindow(window);
+	m_input.ObserveKey(GLFW_KEY_SPACE);
+}
+
+void TestSound::Update(double deltaTime)
+{
+	m_input.Update();
+	if (m_input.WasKeyPressed(GLFW_KEY_SPACE))
+	{
+		PlaySound(TEXT("TestSound.wav"), NULL, SND_FILENAME);
+	}
+}
