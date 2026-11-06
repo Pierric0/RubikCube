@@ -145,6 +145,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CompoundCube.cpp" />
     <ClCompile Include="CubieRenderer.cpp" />
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="KeyboardObserver.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="TestCubie.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CompoundCube.h" />
     <ClInclude Include="CubieRenderer.h" />
     <ClInclude Include="GameInterface.h" />
     <ClInclude Include="InputSystem.h" />

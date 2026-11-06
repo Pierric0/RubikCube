@@ -40,6 +40,12 @@
     <Filter Include="Quelldateien\Shader und Render">
       <UniqueIdentifier>{d998f559-28a8-42a6-ba23-e3b8d7709a7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\MyCube">
+      <UniqueIdentifier>{2482135a-823c-40ee-9eb9-03d80eb59071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\MyCube">
+      <UniqueIdentifier>{eedfad0b-8d4d-4465-bff8-eb1795d367af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestGlm.cpp">
@@ -81,6 +87,9 @@
     <ClCompile Include="TestSound.cpp">
       <Filter>Quelldateien\Test</Filter>
     </ClCompile>
+    <ClCompile Include="CompoundCube.cpp">
+      <Filter>Quelldateien\MyCube</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestGlm.h">
@@ -121,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="TestSound.h">
       <Filter>Headerdateien\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="CompoundCube.h">
+      <Filter>Headerdateien\MyCube</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
