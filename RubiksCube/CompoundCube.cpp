@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
+#include <iostream>
 
 void CompoundCube::Initialize(GLFWwindow* window)
 {
@@ -24,19 +25,35 @@ void CompoundCube::Render(float aspectRatio)
 		glm::lookAt(glm::vec3(0.0f, 0.0f, -9.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f)) * // zuständig die Kamera zu setzen (theoretisch dreht und verschiebt das hier auch den Cube aber man kann sich vorstellen das die Kamera hier gesetzt wird) : View-Matrix
 		glm::mat4_cast(m_orientationQuaternion); // zuständig den würfel aus dem local space in den global Space zu drehen (dadurch das wir quaternions benutzen casten wir das einfach auf eine matrix anstatt hier extra rotation() auszuführen) (translation wird später im code, tatsächlich aber durch rechts nach links regel früher, durchgeführt) : Modell-Matrix
 
-	float offset = m_cubieRenderer.GetCubieExtension();//+0.5f;
+	float offset = m_cubieRenderer.GetCubieExtension() +0.1f;
 	for (int i = 0; i < 3; ++i)
 	{
 		for (int j = 0; j < 3; ++j)
 		{
 			for (int k = 0; k < 3; ++k)
 			{
-				glm::mat4 compound = glm::translate(globalTransformation, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1) * offset));
+				if (i == 1 && j == 1 && k == 1)
+				{
+					continue;
+				}
 
-				compound = glm::rotate(compound, glm::radians(90.0f) * (i % 2), glm::vec3(1.0f, 0.0f, 0.0f));
-				compound = glm::rotate(compound, glm::radians(90.0f) * (j % 2), glm::vec3(0.0f, 1.0f, 0.0f));
-				compound = glm::rotate(compound, glm::radians(90.0f) * (k % 2), glm::vec3(0.0f, 0.0f, 1.0f));
+				//ist tatsächlich so gewollt damit wir die cubeplätze uns merken können (noch nicht sicher)
+				glm::mat4 compound = globalTransformation; //A
+				//glm::mat4 compound = glm::translate(globalTransformation, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1) * offset)); //B
+				
+				/*if (i == 0) {
+					compound = glm::rotate(compound, glm::radians(45.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+				}*/
+				compound = glm::rotate(compound, glm::radians(45.0f) * (i % 2), glm::vec3(1.0f, 0.0f, 0.0f));
+				//compound = glm::rotate(compound, glm::radians(90.0f) * (j % 2), glm::vec3(0.0f, 1.0f, 0.0f));
+				//compound = glm::rotate(compound, glm::radians(90.0f) * (k % 2), glm::vec3(0.0f, 0.0f, 1.0f));
+				
 
+				// i geht nach links, j nach oben, und k nach hinten (also ist 0,0,0 der cube der unten rechts ganz vorne ist)
+				
+				
+				compound = glm::translate(compound, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1) * offset)); //Verschiebt die Cubie dann tatsächlich vom local Space in den global Space //A
+				
 				m_cubieRenderer.Render(compound);
 			}
 		}
