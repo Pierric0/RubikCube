@@ -90,6 +90,9 @@
     <ClCompile Include="CompoundCube.cpp">
       <Filter>Quelldateien\MyCube</Filter>
     </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>Quelldateien\MyCube</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestGlm.h">
@@ -132,6 +135,9 @@
       <Filter>Headerdateien\Test</Filter>
     </ClInclude>
     <ClInclude Include="CompoundCube.h">
+      <Filter>Headerdateien\MyCube</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
       <Filter>Headerdateien\MyCube</Filter>
     </ClInclude>
   </ItemGroup>

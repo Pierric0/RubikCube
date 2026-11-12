@@ -1,9 +1,22 @@
 #include "CubieRenderer.h"
 #include "ShaderUtil.h"
 #include <glm/gtc/type_ptr.hpp>
+#include "Cube.h"
 
-void CubieRenderer::Initialize()
+
+void CubieRenderer::Initialize() 
 {
+	Cube voidCube = Cube();
+
+	Initialize(voidCube);
+}
+
+void CubieRenderer::Initialize(Cube& cube)
+{
+	if (cube.isVoidCube())
+	{
+
+	}
 	float floatArray[6 * 6 * 3];
 	std::vector<glm::vec3> positionField;
 	std::vector<glm::vec3> colorField;

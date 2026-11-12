@@ -2,7 +2,10 @@
 #include "CubieRenderer.h"
 #include "GameInterface.h"
 #include "InputSystem.h"
+#include "Cube.h"
 #include <glm/ext/quaternion_float.hpp>
+#include <glm/vec3.hpp>
+
 class CompoundCube : public GameInterface
 {
 public:
@@ -10,6 +13,7 @@ public:
 	virtual void Render(float aspectRatio);
 	virtual void ClearResources();
 	virtual void Update(double deltaTime);
+	virtual void UpdateCubePositions(int axis, int side, float rotation);
 
 
 private:
@@ -17,5 +21,8 @@ private:
 	//float m_turningAngle;
 	InputSystem m_input;
 	glm::quat m_orientationQuaternion;
+	Cube m_cubePositions[27];
 };
+
+
 

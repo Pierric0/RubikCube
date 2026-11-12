@@ -2,11 +2,13 @@
 #include <glm/mat4x4.hpp>
 #include <GL/glew.h>
 #include <vector>
+#include "Cube.h"
 
 class CubieRenderer
 {
 public:
 	void Initialize();
+	void Initialize(Cube& cube);
 	void Render(const glm::mat4& transformationMatrix); // mit der Matrix wird der Mittelpunkt des cubi angegeben
 	void ClearResources();
 
