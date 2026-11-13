@@ -9,19 +9,21 @@
 class CompoundCube : public GameInterface
 {
 public:
+
+	//CompoundCube();
 	virtual void Initialize(GLFWwindow* window);
 	virtual void Render(float aspectRatio);
 	virtual void ClearResources();
 	virtual void Update(double deltaTime);
-	virtual void UpdateCubePositions(int axis, int side, float rotation);
+	
 
 
 private:
-	CubieRenderer m_cubieRenderer;
+	//CubieRenderer m_cubieRenderer;
 	//float m_turningAngle;
 	InputSystem m_input;
 	glm::quat m_orientationQuaternion;
-	Cube m_cubePositions[27];
+	std::vector<Cube> m_cubePositions;
 };
 
 
